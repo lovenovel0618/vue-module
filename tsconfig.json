@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true, // 不對第三方依賴類型檢查
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true, // 默認導入
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "sourceMap": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.iterable",
+      "scripthost",
+      "WebWorker",
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
