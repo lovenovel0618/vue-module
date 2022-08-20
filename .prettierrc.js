@@ -26,11 +26,17 @@ module.exports = {
   // 不需要自動在文件開頭插入 @prettier
   insertPragma: false,
   // 換行設置 always\never\preserve
-  proseWrap: "never",
+  proseWrap: "always",
   // 指定HTML文件的全局空格敏感度 css\strict\ignore
-  htmlWhitespaceSensitivity: "css",
+  htmlWhitespaceSensitivity: "strict",
   // Vue文件腳本和样式標籤縮進
-  vueIndentScriptAndStyle: false,
+  vueIndentScriptAndStyle: true,
   // 換行符使用 lf 結尾是 可選值"<auto|lf|crlf|cr>"
   endOfLine: "lf",
+  // 在jsx中把'>' 是否單獨放一行
+  jsxBracketSameLine: true,
+  // 讓prettier使用eslint的代碼格式進行校驗
+  eslintIntegration: true,
+  // 不讓prettier使用stylelint的程式碼格式進行校驗
+  stylelintIntegration: false,
 };

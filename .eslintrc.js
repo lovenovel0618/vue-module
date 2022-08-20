@@ -15,14 +15,13 @@ module.exports = {
     es6: true,
   },
   extends: [
-    "plugin:vue/essential",
+    "plugin:vue/vue3-essential",
     "eslint:recommended",
+    "@vue/typescript/recommended",
+    "plugin:prettier/recommended",
     "@vue/prettier",
-    "plugin:vue/recommended",
+    "./.eslintrc-auto-import.json",
   ],
-
-  // add your custom rules here
-  //it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -30,10 +29,10 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
     "@typescript-eslint/no-this-alias": ["off"],
     "vue/max-attributes-per-line": [
-      2,
+      0,
       {
         singleline: 10,
         multiline: {
@@ -44,7 +43,6 @@ module.exports = {
     ],
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
-    "vue/name-property-casing": ["error", "PascalCase"],
     "vue/no-v-html": "off",
     "accessor-pairs": 2,
     "arrow-spacing": [
@@ -323,15 +321,4 @@ module.exports = {
       },
     ],
   },
-  overrides: [
-    {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
-      env: {
-        jest: true,
-      },
-    },
-  ],
 };
