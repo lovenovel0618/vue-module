@@ -30,7 +30,6 @@ import HelloWorld from "./components/HelloWorld.vue";
 @import "@/assets/scss/index.scss";
 </style>
 
-
 <style lang="scss" scoped>
 header {
   line-height: 1.5;

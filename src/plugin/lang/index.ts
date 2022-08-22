@@ -10,9 +10,9 @@ export const i18n = createI18n({
   locale: "zh_TW",
   fallbackLocale: "en_US",
   messages: {
-    "zh_TW": tw,
-    "en_US": en,
-    "zh_CN": cn
+    zh_TW: tw,
+    en_US: en,
+    zh_CN: cn,
   },
 });
 
