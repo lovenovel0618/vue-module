@@ -1,32 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true, // 不對第三方依賴類型檢查
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true, // 默認導入
-    "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": "./",
-    "types": ["webpack-env", "node"],
-    "paths": {
-      "@/*": ["src/*"],
-      "store/*": ["src/store/*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": ["node_modules"]
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
 }

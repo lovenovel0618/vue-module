@@ -1,0 +1,32 @@
+// ! Base
+@import "./base/main";
+@import "./base/base";
+
+// ! Components
+@import "./components/buttons";
+@import "./components/dropdown";
+@import "./components/navigation";
+@import "./components/select";
+
+// ! Layouts
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/sidebar";
+
+// ! Pages
+
+// ! Theme
+@import "./theme/keyframes";
+@import "./theme/theme";
+
+// ! Utils
+@import "./utils/function";
+@import "./utils/mixin";
+@import "./utils/placeholders";
+@import "./utils/variables";
+
+// ! Vendors
+@import "./vendors/tailwind";
+
+// ! Vendors-Extenesions
+@import "./vendors-extenesions/tailwind";
