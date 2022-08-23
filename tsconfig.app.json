@@ -1,6 +1,14 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["types/*.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "types/*.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "config/*.ts",
+    "config/*.d.ts",
+    "config/**/*.ts",
+    "config/**/*.d.ts",
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
