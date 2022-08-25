@@ -27,7 +27,11 @@ export type Plugin = {
 //   config?: Config
 // ) => Promise<R>
 export type Request<R, T> = (
-  params?: T, config?: Config
+  params?: T,
+  config?: Config
 ) => Promise<CommonRes<R>>;
 
-export type RequestMethod = <R, T = any>(url: string, config?: AxiosRequestConfig) => Request<T, R>;
+export type RequestMethod = <R, T = any>(
+  url: string,
+  config?: AxiosRequestConfig
+) => Request<T, R>;

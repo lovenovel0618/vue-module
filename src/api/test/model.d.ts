@@ -8,11 +8,9 @@ export interface RGetInfo {
   // page: number;
 }
 
-
 export interface PGetInfo {
   keyword: string;
 }
-
 
 export interface ResResult {
   id: number;

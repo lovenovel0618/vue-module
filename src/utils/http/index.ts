@@ -2,10 +2,14 @@ import axios from "axios";
 import { API_BASE_URL } from "@/config/constant";
 import { getToken } from "../auth";
 
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, Method } from "axios";
+import type {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  Method,
+} from "axios";
 import type { CommonRes } from "@/api/global";
 import type { Config, RequestMethod } from "./http";
-
 
 const pendingQueue = new Map();
 const CancelToken = axios.CancelToken;
@@ -94,19 +98,21 @@ instance.interceptors.response.use(
   }
 );
 
-
 const request = (method: Method): RequestMethod => {
   return <R, T>(url: string, config: AxiosRequestConfig = {}) => {
     return (params?: T, requestConfig?: Config) => {
-      // TODO: 如果有需要處理 
+      // TODO: 如果有需要處理
+      if (requestConfig) {
+        //
+      }
 
       return instance.request<T, R>({
         url,
         method,
         params,
         ...config,
-      })
-    }
+      });
+    };
   };
 };
 
@@ -114,7 +120,7 @@ const cancel = () => {
   console.log("中斷所有請求:");
 
   if (pendingQueue.size > 0) {
-    pendingQueue.forEach((value, key, map) => {
+    pendingQueue.forEach((value, key) => {
       const cancel = value;
       cancel(key);
     });
