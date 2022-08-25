@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+import request from "@/utils/http";
+
+request.get("/api/test")({id: 100}); 
+</script>
+
 <style lang="scss">
 @media (min-width: 1024px) {
   .about {

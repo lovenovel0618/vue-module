@@ -6,6 +6,9 @@
 // 应用名
 // export const APP_TITLE = "VUE3-Vite-SSR-PM2-DEMO";
 
+// 項目 prefix
+export const PROJECT_PREFIX = "VUE-DEMO";
+
 // 本地服务端口
 export const VITE_PORT = 5173;
 

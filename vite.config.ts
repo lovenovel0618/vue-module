@@ -2,14 +2,14 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import type { ConfigEnv, UserConfigExport } from "vite";
 
-import { createVitePlugins } from "./config/vite/plugin";
+import { createVitePlugins } from "./src/config/vite/plugin";
 import {
   VITE_DROP_CONSOLE,
   VITE_DROP_DEBUGGER,
   VITE_PORT,
-} from "./config/constant";
-import proxy from "./config/vite/proxy";
-import { configManualChunk } from "./config/vite/optimizer";
+} from "./src/config/constant";
+import proxy from "./src/config/vite/proxy";
+import { configManualChunk } from "./src/config/vite/optimizer";
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfigExport => {
@@ -22,6 +22,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
+        "vue-i18n": "vue-i18n/dist/vue-i18n.cjs.js",
       },
     },
     // server

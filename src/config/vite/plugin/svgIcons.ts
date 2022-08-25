@@ -11,7 +11,9 @@ import { fileURLToPath, URL } from "node:url";
 
 export function configSvgIconsPlugin(isBuild: boolean) {
   const svgIconsPlugin = createSvgIconsPlugin({
-    iconDirs: [fileURLToPath(new URL("../../../src/assets/icons", import.meta.url))],
+    iconDirs: [
+      fileURLToPath(new URL("../../../assets/icons", import.meta.url)),
+    ],
     svgoOptions: isBuild,
     // default
     symbolId: "icon-[dir]-[name]",

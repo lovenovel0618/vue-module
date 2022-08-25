@@ -8,7 +8,9 @@ import { fileURLToPath, URL } from "node:url";
 export const AutoImportDeps = () =>
   AutoImport({
     imports: ["vue", "vue-router", "pinia", "vue-i18n"],
-    dts: fileURLToPath(new URL("../../../types/auto-imports.d.ts", import.meta.url)),
+    dts: fileURLToPath(
+      new URL("../../../types/auto-imports.d.ts", import.meta.url)
+    ),
     eslintrc: {
       enabled: true,
     },

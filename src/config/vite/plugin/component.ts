@@ -8,7 +8,7 @@ import { fileURLToPath, URL } from "node:url";
 export const autoRegistryComponents = () => {
   return Components({
     // relative paths to the directory to search for components.
-    dirs: [fileURLToPath(new URL("../../../src/components", import.meta.url))],
+    dirs: [fileURLToPath(new URL("../../../components", import.meta.url))],
 
     // valid file extensions for components.
     extensions: ["vue"],
@@ -20,7 +20,9 @@ export const autoRegistryComponents = () => {
     // generate `components.d.ts` global declarations,
     // also accepts a path for custom filename
     // dts: false,
-    dts: fileURLToPath(new URL("../../../types/components.d.ts", import.meta.url)),
+    dts: fileURLToPath(
+      new URL("../../../types/components.d.ts", import.meta.url)
+    ),
 
     // Allow subdirectories as namespace prefix for components.
     directoryAsNamespace: false,
